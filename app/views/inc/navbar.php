@@ -5,9 +5,10 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-items"><a href="<?php echo URLROOT?>" class="nav-link">Home</a></li>
-                
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-items"><a href="<?php echo URLROOT?>/users/register" class="nav-link">Register</a></li>
+                <li class="nav-items"><a href="<?php echo URLROOT?>/users/login" class="nav-link">Login</a></li>
+
             </ul>
         </div>
     </div>
