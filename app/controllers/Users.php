@@ -32,10 +32,10 @@ class Users extends Controller
             if(empty($data['email'])){
                 $data['email_err'] = 'Please enter the email';
             } else if (!filter_var($data['email'], FILTER_VALIDATE_EMAIL)){
-                $data['name_err'] = 'Please enter valid email';
+                $data['email_err'] = 'Please enter valid email';
 
             } else if($this->usersModel->findUserByEmail($data['email'])){
-                $data['name_err'] = 'Email is already in use';
+                $data['email _err'] = 'Email is already in use';
 
             }
             if(empty($data['password'])){
@@ -53,7 +53,7 @@ class Users extends Controller
                 $data['confirm_password_err'] = 'Password does not match';
 
             }
-            print_r($data);
+            $this->view('users/register', $data);
         } else {
             $this->view('users/register');
         }
