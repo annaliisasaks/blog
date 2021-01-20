@@ -8,7 +8,7 @@
                 <p class="mt-2">Please fill the fields below to register</p>
             </div>
             <div class="card-body">
-                <form class="form" role="form">
+                <form class="form" role="form" method="post" action="<?php echo URLROOT.'/users/register'?>">
                     <div class="form-group">
                         <label for="name">Name<sup>*</sup></label>
                         <input type="text" placeholder="Full name" name="name" class="form-control" id="name">
@@ -19,11 +19,11 @@
                     </div>
                     <div class="form-group">
                         <label for="password">Password<sup>*</sup></label>
-                        <input type="text" placeholder="Password" name="password" class="form-control" id="password">
+                        <input type="password" placeholder="Password" name="password" class="form-control" id="password">
                     </div>
                     <div class="form-group">
                         <label for="confirm_password">Confirm password<sup>*</sup></label>
-                        <input type="text" placeholder="Confirm password" name="confirm_password" class="form-control" id="confirm_password">
+                        <input type="password" placeholder="Confirm password" name="confirm_password" class="form-control" id="confirm_password">
                     </div>
                     <div class="form-group">
                     <button class="btn btn-success btn-lg float-right" type="submit">Register</button>
