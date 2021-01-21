@@ -22,5 +22,15 @@ private $db;
             return false;
         }
     }
+    public function register($data) {
+        $this->db->query('INSERT INTO users SET 
+        name=:name, 
+        email=:email,
+        password=:password
+');
+        $this->db->bind(':name', $data['name']);
+        $this->db->bind(':email', $data['email']);
+        $this->db->bind(':password', $data['password']);
 
-}
+
+    }

@@ -54,6 +54,12 @@ class Users extends Controller
 
             }
             $this->view('users/register', $data);
+
+        if(empty($data['name_err']) and empty($data['email_err']) and empty($data['password_err']) and empty($data['confirm_password_err'])) {
+            $data['password'] = password_hash($data['password'], PASSWORD_DEFAULT);
+            print_r($data);
+        }
+
         } else {
             $this->view('users/register');
         }
