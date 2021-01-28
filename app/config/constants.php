@@ -1,12 +1,12 @@
 <?php
+// Project name
 define('PROJECT_NAME', 'blog');
-//app root
+// App root dir
 define('APPROOT', dirname(dirname(__FILE__)));
+// URL root
+define('URLROOT', 'http://'.$_SERVER['HTTP_HOST'].'/'.PROJECT_NAME);
 
-// url root
-define('URLROOT','http://'.$_SERVER['HTTP_HOST'].'/'.PROJECT_NAME);
-
-// parameetrid db
+// db params
 define('DB_HOST', 'localhost');
 define('DB_USER', 'root');
 define('DB_PASS', '');
