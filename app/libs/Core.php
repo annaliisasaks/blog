@@ -43,4 +43,4 @@ class Core
             return $url;
         }
     }
-} // class end
+}
