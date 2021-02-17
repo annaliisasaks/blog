@@ -10,9 +10,9 @@ class Tag
         $this->db = new Database();
     }
 
-    public function getTags()
+    public function getPostTags($id)
     {
-        $this->db->query('SELECT * FROM tags');
+        $this->db->query('SELECT * FROM tags INNER JOIN post_tags ON post_tags.tag_id=tags.id WHERE ');
         $result = $this->db->getAll();
         return $result;
     }
