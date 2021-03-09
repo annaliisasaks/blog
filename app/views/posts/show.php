@@ -5,20 +5,21 @@
     </div>
     <div class="bg-secondary text-white p-2 mb-3">
         <?php foreach ($data['tags'] as $tag): ?>
-            <a href="<?php echo URLROOT; ?>/posts/edit/<?php echo $tag->id; ?>"
+            <a href="<?php echo URLROOT; ?>/tags/show/<?php echo $tag->id; ?>"
                class=""><?php echo $tag->name; ?></a>
         <?php endforeach; ?>
     </div>
     <p><?php echo $data['post']->content; ?></p>
-    <a href="<?php echo URLROOT ?>/posts" class="btn btn-info">Back</a>
+    <a href="<?php echo URLROOT; ?>/posts" class="btn btn-info">Back</a>
     <hr>
 <?php if ($data['post']->user_id == $_SESSION['user_id']): ?>
     <div class="row justify-content-around">
         <div class="col-8">
-            <a href="<?php echo URLROOT ?>/posts/edit/<?php echo $data['post']->id; ?>" class="btn btn-success">Edit</a>
+            <a href="<?php echo URLROOT; ?>/posts/edit/<?php echo $data['post']->id; ?>"
+               class="btn btn-success">Edit</a>
         </div>
         <div class="col-4">
-            <form action="<?php echo URLROOT ?>/posts/delete/<?php echo $data['post']->id; ?>" method="post">
+            <form action="<?php echo URLROOT; ?>/posts/delete/<?php echo $data['post']->id; ?>" method="post">
                 <input type="submit" value="Delete" class="btn btn-danger">
             </form>
         </div>
